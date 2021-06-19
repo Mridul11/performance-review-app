@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { ContextStore } from '../../context/ContextStore';
-import paypaylogo from '../../paypay_logo.png';
 import "./header.component.css";
 
 export default function HeaderComponent() {
@@ -18,7 +17,6 @@ export default function HeaderComponent() {
     <div className="ui inverted vertical masthead center aligned segment">
       <div className="ui container">
         <div className="ui large secondary inverted menu">
-        <img className="ui small image left aligned container" src={paypaylogo} alt="PayPay image"/>  
           <Link to="/" className=" item">Home</Link>
           {userObj && userObj.admin ? <>
             <Link to="/admin/create" className="item">Create</Link>
